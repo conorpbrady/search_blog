@@ -1,8 +1,21 @@
 {% extends 'base_generic.html' %}
 
+{% load markdown_extras %}
 {% block content %}
 
 <h2>Here's what I've been searching for</h2>
+
+
+{% for bp in blog_posts %}
+<div class="postContainer">
+<div class="title">
+	{{ bp.subject }}
+</div>
+<div class="postBody">
+	{{ bp.post_body | markdown | safe }}
+</div>
+</div>
+{% endfor %}
 
 {% endblock %}
 

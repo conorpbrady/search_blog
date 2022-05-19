@@ -8,3 +8,5 @@ class IndexView(generic.ListView):
     template_name = 'index.html'
     model = BlogPost
     ordering = 'post_date'
+    context_object_name = 'blog_posts'
+

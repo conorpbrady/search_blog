@@ -7,5 +7,5 @@ class BlogPost(models.Model):
 
     post_date = models.DateTimeField(default = timezone.now)
     subject = models.CharField(max_length = 255)
-    post = models.TextField()
+    post_body = models.TextField()
 

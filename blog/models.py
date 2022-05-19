@@ -3,7 +3,7 @@ from django.utils import timezone
 
 # Create your models here.
 
-class Posts(models.Model):
+class BlogPost(models.Model):
 
     post_date = models.DateTimeField(default = timezone.now)
     subject = models.CharField(max_length = 255)
